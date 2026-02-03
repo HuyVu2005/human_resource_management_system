@@ -11,14 +11,12 @@ import java.time.LocalDate;
  * @author Lenovo
  */
 public class FullTimeEmployee extends Employee{
-    private int otHours;
-    private int absentDays;
-
-    public FullTimeEmployee(int otHours, int absentDays, String id, String name, String department, String jobTitle, LocalDate joiningDate, double basicSalary, boolean active) {
+    public FullTimeEmployee(String id, String name, String department, String jobTitle, LocalDate joiningDate, double basicSalary, boolean active) {
         super(id, name, department, jobTitle, joiningDate, basicSalary, active);
-        this.otHours = otHours;
-        this.absentDays = absentDays;
     }
     
-    
+    @Override
+    public double getOvertimeRate() {
+        return 80000; //80k/hour
+    }
 }

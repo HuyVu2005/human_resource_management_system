@@ -4,6 +4,7 @@
  */
 package service;
 
+import java.util.ArrayList;
 import java.util.List;
 import model.Employee;
 
@@ -12,7 +13,7 @@ import model.Employee;
  * @author Lenovo
  */
 public class EmployeeService {
-    private List<Employee> employeeList;
+    private List<Employee> employeeList = new ArrayList<>();
     
     public void viewAll(){
         System.out.println("----------------------------------------------------------------------------------");
@@ -32,6 +33,10 @@ public class EmployeeService {
             }
         }
         return null;
+    }
+    
+    public List<Employee> getAll() {
+        return employeeList;
     }
     
     // Them Nhan vien

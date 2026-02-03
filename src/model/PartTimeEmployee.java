@@ -11,17 +11,13 @@ import java.time.LocalDate;
  * @author Lenovo
  */
 public class PartTimeEmployee extends Employee{
-    private int otHours;
-    private int absentsDay;
 
-    public PartTimeEmployee(int otHours, int absentsDay, String id, String name, String department, String jobTitle, LocalDate joiningDate, double basicSalary, boolean active) {
+    public PartTimeEmployee(String id, String name, String department, String jobTitle, LocalDate joiningDate, double basicSalary, boolean active) {
         super(id, name, department, jobTitle, joiningDate, basicSalary, active);
-        this.otHours = otHours;
-        this.absentsDay = absentsDay;
     }
     
-    
-    
-    
-    
+    @Override
+    public double getOvertimeRate() {
+        return 50000; // 50k/hour
+    }
 }
