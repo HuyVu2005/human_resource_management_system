@@ -10,7 +10,7 @@ import java.time.LocalDate;
  *
  * @author Lenovo
  */
-public class Employee {
+public abstract class Employee {
 
     private String id;
     private String name;
