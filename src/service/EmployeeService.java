@@ -72,4 +72,16 @@ public class EmployeeService {
             System.out.println("Can not find this Employee!");
         }
     }
+    
+    public boolean removeEmployee(String id){
+        Employee emp = findById(id);
+        if(emp == null){
+            System.out.println("Can not find Employee with ID: " + id);
+            return false;
+        }
+        employeeList.remove(emp);
+        System.out.println("Remove successfully!");
+        return true;
+        
+    }
 }
