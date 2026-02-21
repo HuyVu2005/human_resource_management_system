@@ -139,7 +139,6 @@ public class Main {
     
     public static void menuAttendanceService(){
         // to do 
-        System.out.println("Test git push");
     }
     
     public static void menuSalaryService(){
